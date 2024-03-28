@@ -7,11 +7,19 @@
     <title>Verificar Resolução</title>
 </head>
 
-<body>
-    <h2>Resolução da tela</h2>
-    <p class="resolucao"></p>
+<body onscroll="myFunction()" style="padding: 0; margin: 0;">
+    <div style="position: fixed; top: 100px; left: 20px;">
+        <h2>Resolução da tela</h2>
+        <p class="resolucao"></p>
+    </div>
+    <div style="height: 1200px; background-color: antiquewhite; width: 100%; display: block; padding: 20px;">
+        <span>role a tela</span>
+    </div>
     <script>
         document.querySelector(".resolucao").innerText= window.innerWidth + "x" + window.innerHeight
+        function myFunction() {
+            document.querySelector(".resolucao").innerText= window.innerWidth + "x" + window.innerHeight
+        }
     </script>
 </body>
 
